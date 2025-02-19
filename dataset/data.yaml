@@ -1,0 +1,6 @@
+train: C:/Users/HOME/Desktop/train yolo/dataset/images/train
+val: C:/Users/HOME/Desktop/train yolo/dataset/images/val
+nc: 2
+names:
+  - male
+  - female

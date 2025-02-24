@@ -43,7 +43,7 @@ names: ["객체1", "객체2", ...]  # 탐지 객체 이름
 
 o	.txt 파일 형식:
 
-<객체 이름> <x_center> <y_center> <width> <height>
+<객체 이름> <x_left_up> <y_left_down> <x_right_up> <x_right_down>
 
 # 2. change_form.py
    

@@ -3,7 +3,34 @@ from PIL import Image
 
 # 추가적으로 탐지하고자 하는 객체 이름 리스트
 target_classes = [
-    'male','female'
+    'wheelchair',
+    'truck',
+    'tree_trunk',
+    'traffic_sign',
+    'traffic_light',
+    'table',
+    'stroller',
+    'stop',
+    'scooter',
+    'potted_plant',
+    'pole',
+    'person',
+    'parking_meter',
+    'movable_signage',
+    'motorcycle',
+    'kiosk',
+    'fire_hydrant',
+    'dog',
+    'chair',
+    'cat',
+    'carrier',
+    'car',
+    'bus',
+    'bollard',
+    'bicycle',
+    'bench',
+    'barricade',
+    'manhole'
 ]
 
 # 클래스 이름과 ID를 매핑하는 사전 정의

@@ -47,41 +47,59 @@ o	.txt 파일 형식:
 
 o	객체 이름을 번호로 변환
 
-o	바운딩 박스 
-
 •	추가 작업:
 
 ![image](https://github.com/user-attachments/assets/4ad74961-a5db-4ce0-a336-5d648758df85)
 
-o	data.yaml 파일에 정의된 객체 번호 순서대로 change_form.py내의 target_classes내에 객체들을 정의한다.
-•	YOLO 포맷:
-<객체 번호> <x_center> <y_center> <width> <height>
+o	data.yaml 파일에 정의된 객체 번호 순서대로 change_form.py내의 target_classes내에 객체들을 정의한다. 
+
+•	YOLO 포맷: 
+<객체 번호> <x_center> <y_center> <width> <height> 
+
 # 3. split.py
 •	기능:
 o	데이터를 train과 val로 분리한다.
+
 o	랜덤으로 이미지를 선택하여 각 이미지와 해당 라벨 파일을 적절한 폴더로 이동시킨다.
+
 •	사용자 설정:
+
 o	train:val 비율을 설정 가능 (예: 80:20)
+
 # 4. train.py
+
 •	기능: 준비된 데이터셋과 data.yaml 파일을 기반으로 YOLO 모델을 학습시킨다.
+
 •	명령어 예시:
 yolo task=detect mode=train model=yolov8n.pt data=/dataset/data.yaml epochs=50 imgsz=640
+
 •	추가 작업: cpu 환경에서 작업하면 시간이 매우 오래 걸린다.따라서 gpu 환경에서 작업 진행 시 main내의 try 안에 device를 gpu로 바꿔 실행.
 
 •	주요 파라미터:
+
 o	model: 학습에 사용할 YOLO 모델 가중치 (예: yolov8n.pt)
+
 o	data: data.yaml 파일 경로
+
 o	epochs: 학습 반복 횟수
+
 o	imgsz: 이미지 크기
 
 #전체 워크 플로우 요약
+
 1.	YOLO v8 모델 설치
-2.	원시 이미지와 라벨링 데이터를 준비
-3.	maketxt.py 실행: annotations.xml 파일을 .txt 파일로 변환
-4.	change_form.py 실행: .txt 파일을 YOLO 형식으로 변환
-5.	split.py 실행: 데이터를 train과 val 폴더로 분리
-6.	data.yaml 작성: 데이터 경로와 객체 정보를 정의
-7.	train.py 실행: YOLO 모델 학습
+2.	
+3.	원시 이미지와 라벨링 데이터를 준비
+4.	
+5.	maketxt.py 실행: annotations.xml 파일을 .txt 파일로 변환
+6.	
+7.	change_form.py 실행: .txt 파일을 YOLO 형식으로 변환
+8.	
+9.	split.py 실행: 데이터를 train과 val 폴더로 분리
+10.	
+11.	data.yaml 작성: 데이터 경로와 객체 정보를 정의
+12.	
+13.	train.py 실행: YOLO 모델 학습
 
 참고 사항
 •	학습 성능을 높이기 위해 데이터 증강(Data Augmentation) 기법을 사용할 수 있음.

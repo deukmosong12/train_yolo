@@ -88,7 +88,7 @@ o	imgsz: 이미지 크기
 #전체 워크 플로우 요약
 
 1.	YOLO v8 모델 설치
-3.	원시 이미지와 라벨링 데이터를 준비
+3.	원시 이미지와 라벨링 데이터(annotation.xml)를 준비
 5.	maketxt.py 실행: annotations.xml 파일을 .txt 파일로 변환
 7.	change_form.py 실행: .txt 파일을 YOLO 형식으로 변환
 9.	split.py 실행: 데이터를 train과 val 폴더로 분리	

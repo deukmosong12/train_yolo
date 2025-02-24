@@ -18,7 +18,7 @@ o	YOLO 학습 구조에 맞춰 train 및 val 폴더를 준비하고, data.yaml �
 •	labels: 각 이미지에 해당하는 라벨링 정보(.txt 파일)가 저장되는 폴더
 •	data.yaml: 데이터 경로 및 탐지 객체 정보를 정의한 파일
 
-#data.yaml 형식
+# data.yaml 형식
 ![image](https://github.com/user-attachments/assets/4cb4fd69-f49f-497b-a437-3a170dfb9fe3)
 #
 train: /dataset/train/images  # 학습 이미지 데이터 경로

@@ -6,13 +6,13 @@ YOLO v8 모델이 탐지하지 못하는 객체를 추가적으로 탐지하거�
    
 o	YOLO v8 모델 설치: pip install ultralytics
 
-4.	라벨링 데이터 준비
+2.	라벨링 데이터 준비
    
 o	원시 이미지 파일
 
 o	각 이미지에 해당하는 라벨링 객체와 좌표가 포함된 .txt 파일 or annotaion
 
-6.	데이터셋 폴더 구조 설정
+3.	데이터셋 폴더 구조 설정
    
 o	YOLO 학습 구조에 맞춰 train 및 val 폴더를 준비하고, data.yaml 파일을 생성한다.
 

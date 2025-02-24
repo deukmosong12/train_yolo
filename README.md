@@ -13,11 +13,11 @@ o	YOLO 학습 구조에 맞춰 train 및 val 폴더를 준비하고, data.yaml �
 
 # YOLO 모델 학습을 위한 데이터셋 폴더 구조
 ![image](https://github.com/user-attachments/assets/9f624ad6-81b4-44fb-bfba-e36f5291eda4)
-#
+
 •	images: 학습 및 검증용 이미지 파일들이 저장되는 폴더
-#
+
 •	labels: 각 이미지에 해당하는 라벨링 정보(.txt 파일)가 저장되는 폴더
-#
+
 •	data.yaml: 데이터 경로 및 탐지 객체 정보를 정의한 파일
 
 # data.yaml 형식

@@ -20,6 +20,7 @@ o	YOLO 학습 구조에 맞춰 train 및 val 폴더를 준비하고, data.yaml �
 
 #data.yaml 형식
 ![image](https://github.com/user-attachments/assets/4cb4fd69-f49f-497b-a437-3a170dfb9fe3)
+#
 train: /dataset/train/images  # 학습 이미지 데이터 경로
 val: /dataset/val/images      # 검증 이미지 데이터 경로
 nc: <탐지 객체의 총 수>      # 탐지 객체 종류의 개수

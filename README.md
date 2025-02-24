@@ -32,26 +32,37 @@ names: ["객체1", "객체2", ...]  # 탐지 객체 이름
 # 실행파일 설명
 1. maketxt.py
 •	기능: 이미지의 바운딩 박스 정보를 기록한 annotations.xml 파일에서 각 이미지에 해당하는 바운딩 박스 좌표만 추출하여 .txt 파일로 저장한다.
+
 •	출력:
+
 o	.txt 파일 형식:
+
 <객체 이름> <x_center> <y_center> <width> <height>
-2. change_form.py
+
+3. change_form.py
+   
 •	기능: maketxt.py로 생성된 .txt 파일을 YOLO 모델이 학습 가능한 형식으로 변환한다.
+
 •	작업:
+
 o	객체 이름을 번호로 변환
+
 o	바운딩 박스 
+
 •	추가 작업:
+
 ![image](https://github.com/user-attachments/assets/4ad74961-a5db-4ce0-a336-5d648758df85)
+
 o	data.yaml 파일에 정의된 객체 번호 순서대로 change_form.py내의 target_classes내에 객체들을 정의한다.
 •	YOLO 포맷:
 <객체 번호> <x_center> <y_center> <width> <height>
-3. split.py
+5. split.py
 •	기능:
 o	데이터를 train과 val로 분리한다.
 o	랜덤으로 이미지를 선택하여 각 이미지와 해당 라벨 파일을 적절한 폴더로 이동시킨다.
 •	사용자 설정:
 o	train:val 비율을 설정 가능 (예: 80:20)
-4. train.py
+6. train.py
 •	기능: 준비된 데이터셋과 data.yaml 파일을 기반으로 YOLO 모델을 학습시킨다.
 •	명령어 예시:
 yolo task=detect mode=train model=yolov8n.pt data=/dataset/data.yaml epochs=50 imgsz=640

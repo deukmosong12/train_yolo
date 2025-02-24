@@ -27,7 +27,7 @@ train: /dataset/train/images  # 학습 이미지 데이터 경로
 val: /dataset/val/images      # 검증 이미지 데이터 경로
 nc: <탐지 객체의 총 수>      # 탐지 객체 종류의 개수
 names: ["객체1", "객체2", ...]  # 탐지 객체 이름
-#실행파일 설명
+# 실행파일 설명
 1. maketxt.py
 •	기능: 이미지의 바운딩 박스 정보를 기록한 annotations.xml 파일에서 각 이미지에 해당하는 바운딩 박스 좌표만 추출하여 .txt 파일로 저장한다.
 •	출력:

@@ -73,16 +73,19 @@ def main():
     try:
         results = model.train(
             data=data_path,             # 데이터 설정 파일 경로
-            epochs=50,                  # 학습 에포크 수
+            epochs=500,                 # 학습 에포크 수 (증가)
             imgsz=640,                  # 이미지 크기
             batch=16,                   # 배치 크기
             project='yolov8_project',   # 결과 저장 프로젝트 이름
             name='experiment1',         # 실험 이름
-            optimizer='SGD',            # 옵티마이저 설정 (기본값: Adam)
+            optimizer='SGD',            # 옵티마이저 설정
             lr0=0.01,                   # 초기 학습률
-            device='cpu',               # 사용할 디바이스 (예: '0', '0,1', 'cpu')
-            verbose=True                # 상세 로그 출력
+            device='cpu',               # 사용할 디바이스
+            verbose=True,               # 상세 로그 출력
+            patience=50,                # 조기 종료 조건 (10 epoch 성능 개선 없을 시)
+            early_stop=True            # early stopping 활성화
         )
+
         print("모델 학습이 완료되었습니다.")
     except Exception as e:
         print(f"학습 중 오류가 발생했습니다: {e}")
